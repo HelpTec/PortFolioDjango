@@ -1,0 +1,9 @@
+/***PLANTILLA CSS CUSTOMIZADA***/
+
+h1 {
+    font-size: 15px;
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Comic Sans";
+    color: brown;
+}
