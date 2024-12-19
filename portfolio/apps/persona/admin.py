@@ -1,3 +1,17 @@
 from django.contrib import admin
 
-# Register your models here.
+from apps.persona.models import Persona
+
+@admin.register(Persona)
+class PersonaAdmin(admin.ModelAdmin):
+    list_display = (
+        'user',
+        'nombres',
+        'apellido',
+        'nacimiento',
+        'telefono',
+        'mail',
+        'redes',
+        'fotoPerf',
+        'bio'
+    )

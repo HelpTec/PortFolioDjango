@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -44,7 +45,13 @@ LOCAL_APPS = [
     'apps.master',
     'apps.persona',
     'apps.usuario',
-    'apps.redsoc'
+    'apps.redsoc',
+    'apps.estudios',
+    'apps.bio',
+    'apps.foto',
+    'apps.post',
+    'apps.titles',
+    'apps.trabajos'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
@@ -60,6 +67,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
+
 
 TEMPLATES = [
     {
@@ -121,6 +129,11 @@ USE_I18N = True
 
 USE_TZ = True
 
+
+#congiguracion de archivos de medios
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/

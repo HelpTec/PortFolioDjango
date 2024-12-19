@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from apps.redsoc.models import RedSoc
+
+@admin.register(RedSoc)
+class RedSocAdmin(admin.ModelAdmin):
+    list_display = (
+        'nombre',
+        'url'
+    )
