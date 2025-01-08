@@ -11,18 +11,18 @@ body {
 
 /***NOMBRE Y APELLIDO***/
 .portada {
-    margin-top: 60px;
-    margin-left: 60px;
     font-family: Fantasy;    
     color: white;
     width: 700px;
+    margin-left: 15%;    
 }
 
-h1 {
+#nomape {
+    margin-top: 20px;
     font-size: 110px;
 }
 
-h2 {
+#titulo {
     font-size: 70px;
 }
 
@@ -33,6 +33,8 @@ h2 {
     background-color: white;
     height: 20px;
     width: 400px;
+    padding-top: 10px;
+    
 }
 
 #vertical {
@@ -43,9 +45,6 @@ h2 {
 /***FOTO PERFIL CON OVALO POR DEBAJO***/
 
 .contenedor-fotoperf {
-    margin-top: 30px;
-    margin-left: 40%;
-    margin-right: 10px;
     border: 1px solid white;
     width: 400px;
     height: 400px;

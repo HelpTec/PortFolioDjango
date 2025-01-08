@@ -2,14 +2,24 @@
 
 
 {% block content %}
-    <div class="rectangulo" id="vertical">
+<div class="container-xxl">
+    <div class="row">
+        <div class="col-xl-8">
+            <div class="contenedor-portada">
+                <div class="rectangulo"> 
+                    <h1 class="portada" id="nomape">Lorem ipsum</h1>
+                    <h2 class="portada" id="titulo">dolor sit amet</h2>
+                </div>
+                <div class="rectangulo" id="vertical">
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4">
+            <div class="contenedor-fotoperf">
+                <div class="fotoperf"></div>
+                <div class="ovalo"></div>
+            </div>
+        </div>
     </div>
-    <div class="rectangulo"> 
-        <h1 class="portada">Lorem ipsum</h1>
-        <h2 class="portada">dolor sit amet</h2>
-    </div>
-    <div class="contenedor-fotoperf">
-        <div class="fotoperf"></div>
-        <div class="ovalo"></div>
-    </div>
+</div>
 {% endblock %}
