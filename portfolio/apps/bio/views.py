@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from django.views.generic import TemplateView
+from django.views.decorators.clickjacking import xframe_options_exempt
+from django.utils.decorators import method_decorator
 
-# Create your views here.
+@method_decorator(xframe_options_exempt, name="dispatch")
+class MasterView(TemplateView):
+    name = "bio"
+    template_name = "bio.html"

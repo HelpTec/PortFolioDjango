@@ -14,7 +14,12 @@
       
 </head>
     <body>
-      {% block content %}{% endblock %}
+      <div class="container-xxl">
+        {% block content %}
+        {% endblock %}
+      <div class="row mt-5">
+        {% include "bio/bio.html" %}
+      </div>
       <div class="fondo"></div>
     </body>
 

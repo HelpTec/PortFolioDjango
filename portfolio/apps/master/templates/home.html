@@ -1,6 +1,4 @@
 {% extends "base.html" %}
-
-
 {% block content %}
 
 <style>
@@ -51,14 +49,13 @@
 
 /***FOTO PERFIL CON OVALO POR DEBAJO***/
 
-.contenedor-fotoperf {
-    margin-left: -35%;
+.contenedor-logo {
     border: 1px solid white;
     width: 400px;
     height: 400px;
 }
 
-.fotoperf{
+.logo{
     border-radius: 50%;
     border: 1px solid white;
     margin-top: 15%;
@@ -85,7 +82,6 @@
 
 </style>
 
-<div class="container-xxl">
     <div class="row">
         <div class="col-xl-8">
             <div class="contenedor-portada">
@@ -113,13 +109,12 @@
             </div>
         </div>
         <div class="col-xl-4">
-            <div class="contenedor-fotoperf">
-                <div class="fotoperf"></div>
-                <div class="ovalo"></div>
+            <div class="contenedor-logo">
+                <div class="logo"></div>
             </div>
         </div>
     </div>
-    
-</div>
+
+
 
 {% endblock %}
