@@ -4,6 +4,6 @@ from django.views.decorators.clickjacking import xframe_options_exempt
 from django.utils.decorators import method_decorator
 
 @method_decorator(xframe_options_exempt, name="dispatch")
-class MasterView(TemplateView):
+class BioView(TemplateView):
     name = "bio"
     template_name = "bio.html"
