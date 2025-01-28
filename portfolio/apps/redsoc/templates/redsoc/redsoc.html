@@ -1,3 +1,4 @@
+{% load static %}
 <style>
     .icono-sm{
         border: 1px solid white;
@@ -19,8 +20,10 @@
     </div>
     <div class="row mt-5">
         <div class="col-xl-4">
-            <div class="contenedor-logo">
-                <div class="logo"></div>
+            <div class="container d-flex justify-content-center flex-column">
+                <div class="logo">
+                    <img src="{% static 'img/iconoplanta2.jpg' %}" alt="iconoplanta">
+                </div>
             </div>
         </div>
         <div class="col-xl-5">
