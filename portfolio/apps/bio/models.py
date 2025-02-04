@@ -3,7 +3,8 @@ from apps.estudios.models import Estudios
 from apps.trabajos.models import Trabajos
 
 class Bio(models.Model):
-    texto = models.CharField(max_length=1000)
+    texto = models.TextField
+    texto_dos = models.TextField
     estudios = models.ForeignKey(
         Estudios,
         on_delete= models.CASCADE,

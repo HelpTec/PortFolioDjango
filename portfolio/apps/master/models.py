@@ -6,3 +6,6 @@ class Master(models.Model):
     persona = models.ForeignKey(Persona, 
                                 on_delete= models.CASCADE, 
                                 null= True, blank=True)
+    logo = models.CharField(max_length=500, 
+                            null= True, blank=True)
+    

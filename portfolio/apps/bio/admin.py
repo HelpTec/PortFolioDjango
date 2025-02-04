@@ -6,6 +6,7 @@ from apps.bio.models import Bio
 class BioAdmin(admin.ModelAdmin):
     list_display = (
         'texto',
+        'texto_dos',
         'estudios',
         'trabajos'
     )

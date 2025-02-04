@@ -6,5 +6,6 @@ from apps.master.models import Master
 class MasterAdmin(admin.ModelAdmin):
     list_display = (
         'hardcoded',
-        'persona'
+        'persona',
+        'logo'
     )
