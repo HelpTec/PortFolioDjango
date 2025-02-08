@@ -1,9 +1,12 @@
 from django.db import models
+from apps.persona.models import Persona
 
 class Trabajos(models.Model):
-    ocupacion = models.CharField(max_length=50)
-    empresa = models.CharField(max_length=50)
-    urlEmpresa = models.CharField(max_length=100)
-    inicio = models.DateField()
-    final = models.DateField(null=True, blank=True)
-    avatarImg = models.CharField(max_length=100)
+    nombre = models.CharField(max_length=100)
+    urlTrabajo = models.CharField(max_length=300, null= True, blank= True)
+    avatarImg = models.CharField(max_length=300)
+    persona = models.ForeignKey(Persona, 
+                                on_delete= models.CASCADE, 
+                                related_name= "Trabajos",
+                                blank= True, 
+                                null= True)

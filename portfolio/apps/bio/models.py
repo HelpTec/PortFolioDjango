@@ -1,17 +1,10 @@
 from django.db import models
-from apps.estudios.models import Estudios
-from apps.trabajos.models import Trabajos
+from apps.persona.models import Persona
 
 class Bio(models.Model):
-    texto = models.TextField
-    texto_dos = models.TextField
-    estudios = models.ForeignKey(
-        Estudios,
-        on_delete= models.CASCADE,
-        blank=True,
-        null=True)
-    trabajos = models.ForeignKey(
-        Trabajos,
-        on_delete= models.CASCADE, 
-        blank=True, 
-        null=True)
+    persona = models.ForeignKey(Persona, 
+                                on_delete= models.CASCADE, 
+                                related_name= "Bio",
+                                blank= True, 
+                                null= True)
+    fotoPerf = models.CharField(max_length=300, blank= True, null= True)

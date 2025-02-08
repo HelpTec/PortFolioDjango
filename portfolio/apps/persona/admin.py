@@ -11,7 +11,4 @@ class PersonaAdmin(admin.ModelAdmin):
         'nacimiento',
         'telefono',
         'mail',
-        'redes',
-        'fotoPerf',
-        'bio'
     )

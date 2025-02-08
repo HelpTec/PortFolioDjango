@@ -15,8 +15,9 @@ class MasterView(TemplateView):
         context = super().get_context_data(**kwargs)
         datos = Master.objects.first()
         persona = Persona.objects.first()
-        context["titulos"] = datos.persona.Titles.all()
-        context["datos"] = datos
+        if persona:
+            context["titulos"] = datos.persona.Titles.all()
+            context["datos"] = datos
         return context
 
     

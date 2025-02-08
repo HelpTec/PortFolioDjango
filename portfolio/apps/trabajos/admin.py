@@ -5,10 +5,8 @@ from apps.trabajos.models import Trabajos
 @admin.register(Trabajos)
 class TrabajoAdmin(admin.ModelAdmin):
     list_display = (
-        'ocupacion',
-        'empresa',
-        'urlEmpresa',
-        'inicio',
-        'final',
-        'avatarImg'
+        'nombre',
+        'urlTrabajo',
+        'avatarImg',
+        'persona'
     )
