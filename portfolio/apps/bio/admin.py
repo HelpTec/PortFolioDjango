@@ -6,5 +6,5 @@ from apps.bio.models import Bio
 class BioAdmin(admin.ModelAdmin):
     list_display = (
         "persona",
-        "fotoPerf"
+        "fotoPerf",
         )

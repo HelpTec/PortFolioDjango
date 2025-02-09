@@ -6,6 +6,6 @@ class RedSoc(models.Model):
     url = models.CharField(max_length = 500)
     persona = models.ForeignKey(Persona, 
                                 on_delete= models.CASCADE, 
-                                related_name= "Redsoc",
+                                related_name= "RedSoc",
                                 blank= True, 
                                 null= True)

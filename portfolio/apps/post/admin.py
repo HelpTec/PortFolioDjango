@@ -6,5 +6,4 @@ from apps.post.models import Post
 class PostAdmin(admin.ModelAdmin):
     list_display = (
         'texto',
-        'bio'
     )
