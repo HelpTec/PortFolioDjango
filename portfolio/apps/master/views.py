@@ -20,14 +20,17 @@ class MasterView(TemplateView):
         datos = Master.objects.first()
         persona = Persona.objects.first()
         bio = Bio.objects.first()
+
         if persona:
             context["texto_uno"] = bio.textos.first()
             context["texto_dos"] = bio.textos.last()
+            context["fotoperf"] = bio.fotoPerf
             context["estudio"] = persona.Estudios.all()
             context["redsoc"] = persona.RedSoc.all()
             context["titulos"] = persona.Titles.all()
             context["trabajos"] = persona.Trabajos.all()
             context["datos"] = datos
+            context["estudios"] = persona.Estudios.all()
         return context
 
     
