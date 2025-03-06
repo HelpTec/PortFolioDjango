@@ -82,14 +82,11 @@
 
 /***FOTO PERFIL Y LOGO ***/
 .logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: clamp(40px, 10vh, 90px);
+    height: clamp(50px, 10vh, 100px);
 }
 .logo-img {
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 100%;
+    max-height: 100%;
     height: auto;
     object-fit: contain;
     border-radius: 50%;
@@ -115,27 +112,26 @@
 <!-- ESPACIO HOME  -->
 <div class="container position-absolute top-0 end-0 p-2">
     <div class="row d-flex flex-row justify-content-end">
-        <div class="col-lg-4 col-md-5 col-12 d-flex flex-row justify-content-center me-3">
-            <div class="row justify-content-center">
-        <div class="col-7 col-md-3 d-flex justify-content-center">
-            <a href="#bio" class="btn btn-secondary w-100 d-flex 
-                align-items-center justify-content-center">BIO</a>
-        </div>
-        <div class="col-7 col-md-3 d-flex justify-content-center">
-            <a href="#estudios" class="btn btn-secondary w-100 d-flex 
-                align-items-center justify-content-center">ESTUDIOS</a>
-        </div>
-        <div class="col-7 col-md-3 d-flex justify-content-center">
-            <a href="#trabajos" class="btn btn-secondary w-100 d-flex 
-                align-items-center justify-content-center">TRABAJOS</a>
-        </div>
-        <div class="col-7 col-md-3 d-flex justify-content-center">
-            <a href="#redes" class="btn btn-secondary w-100 d-flex 
-                align-items-center justify-content-center">CONTACTOS</a>
-        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 d-flex flex-row 
+                    justify-content-center me-3 p-1">
+            <div class="col-lg-7 col-md-2 col-sm-2 d-flex justify-content-center">
+                <a href="#bio" class="btn btn-secondary w-100 d-flex 
+                    align-items-center justify-content-center">BIO</a>
+            </div>
+            <div class="col-lg-7 col-md-2 col-sm-2  d-flex justify-content-center">
+                <a href="#estudios" class="btn btn-secondary w-100 d-flex 
+                    align-items-center justify-content-center">ESTUDIOS</a>
+            </div>
+            <div class="col-lg-7 col-md-2 col-sm-2  d-flex justify-content-center">
+                <a href="#trabajos" class="btn btn-secondary w-100 d-flex 
+                    align-items-center justify-content-center">TRABAJOS</a>
+            </div>
+            <div class="col-lg-7 col-md-2 col-sm-2  d-flex justify-content-center">
+                <a href="#redes" class="btn btn-secondary w-100 d-flex 
+                    align-items-center justify-content-center">CONTACTOS</a>
             </div>
         </div>
-        <div class="col-lg-1 col-md-1 col-4 d-flex flex-row justify-content-center">
+        <div class="col-2">
             <div class="logo-container">
                 <a href="/admin">
                     <img src= "{{ datos.logo }}" alt="iconoplanta" class="logo-img">
