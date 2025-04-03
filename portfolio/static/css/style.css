@@ -1,11 +1,5 @@
 /***PLANTILLA CSS CUSTOMIZADA***/
 
 
-/***FONDO Y PADDING GENERAL***/
-body {
-    background-color: black;
-    min-height: 100vh;
-    display: flex;
-    padding: 35px;
-}
+/***FONDOS***/
 
