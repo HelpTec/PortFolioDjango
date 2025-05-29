@@ -1,54 +1,6 @@
 {% extends "base.html" %}
-{% load static %}
 {% block content %}
-<style>
-    .home-container{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    align-items: flex-end;
-    }
-    .home-container::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: url('{% static "img/planta.jpg" %}') no-repeat center center fixed;
-    background-size: cover;
-    filter: brightness(90%) contrast(150%);
-    opacity: 0.2;
-    z-index: 0;
-}
-    .rectangulo{
-        width: 105px;
-        background-color: rgb(233, 190, 85);
-        opacity: 1;
-        filter: brightness(100%) contrast(100%);
-    }
-    #mediano{
-        height: 50%;
-        background-color: rgb(111, 151, 206);
-        align-self: flex-end;
-        margin-left: 20vw;
-    }
-    #largo{
-        height: 100%;
-        width: 85px;
-    }
-    .titulo-container{
-        margin-left: 3vw;
-    }
-    .titulo{
-        font-size: clamp(2rem, 5vw, 7rem);
-    }
-</style>
 
-<div class="home-container d-flex align-items-end">
-        <div class="rectangulo" id="mediano"></div>
-        <div class="rectangulo" id="largo"></div>
-        <div class="titulo-container align-self-center w-100">
-            <h1 class="titulo">Welcome!</h1>
-        </div>
-        
+<div class="fondo-container d-flex align-items-end" id="home">
 </div>
 {% endblock %}

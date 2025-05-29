@@ -11,10 +11,14 @@ from apps.trabajos.models import Trabajos
 
 
 
+class IntroView(TemplateView):
+    name = "intro"
+    template_name = "intro.html"
+
 class MasterView(TemplateView):
     name = "home"
     template_name = "home.html"
-
+    
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         datos = Master.objects.first()
