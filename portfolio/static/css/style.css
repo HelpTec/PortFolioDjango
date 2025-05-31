@@ -23,6 +23,7 @@
         background-size: cover;
     }
     #home::before {
+        height: clamp(200px, 40vh, 400px);
         background: url('/static/img/future.png') no-repeat center center fixed;
         content: "";
         position: absolute;
@@ -31,8 +32,21 @@
         filter: brightness(1.1) contrast(0.85) saturate(1.2) blur(1px);
         opacity: 0.8;
     }
+    .img-container{
+        filter: brightness(1.1) contrast(0.85) saturate(1.2);
+        opacity: 0.8;
+    }
+    #banner{
+        position: relative;
+        width: 100%;
+        height: clamp(300px, 90vh, 950px);
+    }
+    #perf{
+        clip-path: ellipse(45% 45%);
+        max-height: 350px;
+    }
 
-/***ELEMENTOS DEL HOME***/
+/***ELEMENTOS DEL INTRO***/
     
     .rectangulo{
         width: 105px;
@@ -60,4 +74,21 @@
     .btn{
         opacity: 1;
         filter: brightness(100%) contrast(100%);
+    }
+
+/***ELEMENTOS DEL INTRO***/
+
+    .lead{
+        font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+        font-size: clamp(1.5rem, 3.5vw, 2.25rem);  /* de 16px a 20px aprox */
+        line-height: 1.6;
+    }
+
+    #Bio{
+        background-color: #f1f5f9
+    }
+    #sep{
+        border-right-style: solid;
+        border-color: black;
+        border-width: 1px;
     }
