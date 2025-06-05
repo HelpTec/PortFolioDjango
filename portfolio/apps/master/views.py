@@ -34,6 +34,7 @@ class BioView(TemplateView):
             context["titulos"] = persona.Titles.all()
             context["datos"] = datos
             context["estudios"] = persona.Estudios.all()
+            context["tecnos"] = persona.tecno.all()
         return context
 
 class MasterView(TemplateView):
@@ -48,6 +49,7 @@ class MasterView(TemplateView):
 
         if persona:
             context["trabajos"] = persona.Trabajos.all()
+            context["redsoc"] = persona.RedSoc.all()
         return context
 
     

@@ -45,6 +45,17 @@
         clip-path: ellipse(45% 45%);
         max-height: 350px;
     }
+    .fotoperf{
+        width: 100%;
+        object-fit: cover;
+    }
+    .fotosideales{
+        clip-path: ellipse(45% 45%);
+        max-height: 200px;
+        width: auto;
+        object-fit: cover;
+        
+    }
 
 /***ELEMENTOS DEL INTRO***/
     
@@ -66,9 +77,10 @@
     }
     .titulo-container{
         margin-left: 3vw;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
     }
     .titulo{
-        font-size: clamp(2rem, 5vw, 7rem);
+        font-size: clamp(2rem, 5vw, 3.5rem);
     }
 
     .btn{
@@ -77,6 +89,18 @@
     }
 
 /***ELEMENTOS DEL HOME y otras vistas***/
+
+    .Contacto{
+        margin-top: 0;
+        align-self: flex-start;
+        font-size: 3.5em;
+    }
+
+    .Contacto{
+        margin-top: 0;
+        text-align: center;
+        font-size: 3em;
+    }
 
     .lead{
         font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
@@ -94,6 +118,11 @@
     }
     #sepbot{
         border-bottom-style: solid;
+        border-color: black;
+        border-width: 1px;
+    }
+    #sepleft{
+        border-left-style: solid;
         border-color: black;
         border-width: 1px;
     }
@@ -138,4 +167,45 @@
     font-size: 0.9rem;
     color: #555;
     margin-bottom: 4px;
+    }
+    /***ELEMENTOS DE BIO***/
+    .bio-extras {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-top: 40px;
+}
+
+    .bio-column {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    .tech-icons img {
+        height: 80px;
+        margin: 10px;
+        transition: transform 0.3s ease;
+    }
+    .tech-icons .logoestablecimiento img:hover {
+        transform: scale(1.1);
+    }
+
+    .study-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .study-list li {
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+        color: #333;
+    }
+    .tech-icons small {
+        margin-top: 5px;
+        color: #444;
+    }
+    .logoestablecimiento{
+        height: 50px;
+        margin: 10px;
+        transition: transform 0.3s ease;
     }

@@ -3,18 +3,74 @@
 <div class="container-fluid my-5 mx-0 px-0" id="Bio">
   <div class="row align-items-center">
     <div class="col-lg-6 d-flex justify-content-center" id="sep">
-      <img src="/static/img/perf.jpg" 
-      class="img-fluid" 
-      alt="Foto de perfil" id="perf">
+      <img src="{{ fotoperf }}" 
+      class="fotoperf"
+      alt="Foto de perfil">
     </div>
     <div class="col-lg-6">
       <p class="lead">
-        <span class="lead fw-bold">Lorem</span>, ipsum dolor sit amet consectetur adipisicing elit. 
-        Esse, voluptatibus vero quod distinctio magnam ab rem. 
-        Tempore veniam praesentium magni quisquam, eos amet, 
-        dignissimos dolorum, asperiores itaque assumenda nihil omnis!
+        <strong>{{ texto_uno.texto }}</strong>
+        {{ texto_dos.texto }}
       </p>
     </div>
   </div>
 </div>
+<div class="bio-extras">
+  <div class="bio-column px-3 d-flex flex-column align-items-end">
+  <h3>Tecnologías que uso</h3>
+  <div class="tech-icons d-flex flex-wrap gap-4 justify-content-end">
+    {% for tecnologia in tecnos %}
+      <div class="tech-item d-flex flex-column align-items-center text-center">
+        <img src="{{ tecnologia.avatarImg }}" alt="{{ tecnologia.nombre }}" class="tech-img">
+        <small>{{ tecnologia.nivel }}</small>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+  <div class="bio-column px-3" id="sepleft">
+    <h3>Formación</h3>
+    <ul class="study-list mt-3">
+      {% for estudio in estudios %}
+      <div class="container d-flex flex-row gap-4 justify-content-start">
+      <img class="logoestablecimiento" src="{{ estudio.avatarImg }}" alt="icono">
+      <li>
+        <a href="{{ estudio.urlEstablecimiento }}">
+          <strong>{{ estudio.inicio}} - {% if estudio.final == None %} En Curso {% else %} {{ estudio.final }} {% endif %}
+          </strong> 
+          <br> {{ estudio.titulo }} en {{estudio.establecimiento}}
+        </a>  
+      </li>
+      </div>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+
+<!-- beliefs para mas tarde
+<div class="container-fluid my-5 mt-3 px-3">
+  <h1>Mis Ideales</h1>
+  <div class="row align-items-center px-5" id="Bio">
+    <div class="col-lg-6 d-flex justify-content-center" id="sep">
+      <h2><strong>Codigo simple con raices firmes</strong>, que pueda crecer y desarrollarse constantemente</h2>
+    </div>
+    <div class="col-lg-6 d-flex justify-content-center">
+      <img src="/static/img/iconoplanta.jpg" 
+      class="fotosideales"
+      alt="foto">
+    </div>
+  </div>
+</div>
+-->
+{% endblock %}
+
+{% block footer %}
+              {% for red in redsoc %}
+              <div class="tech-item d-flex flex-column align-items-center text-center">
+                <a href="{{ red.url }}">
+                  <img src="{{ red.iconoImg }}" alt="{{ red.nombre }}" class="red-img">
+                </a>
+              </div>
+              {% endfor %}
 {% endblock %}

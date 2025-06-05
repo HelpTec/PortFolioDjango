@@ -4,30 +4,30 @@
 <div class="container-fluid px-0 mx-0">
 <img src="/static/img/future.png" alt="banner-fondo" class="img-container" id="banner">
 </div>
-<div id="games-container" class="cards-container">
-  <div class="card">
-    <img src="/static/img/iconoplanta.jpg" alt="portada de trabajo">
-      <div class="card-info">
-        <h2>titulo del trabajo</h2>
-        <p><strong>Año:</strong> ? </p>
-        <p><strong>Estado:</strong> ? </p>
+  <section id="Bio" style="margin-top: 60px;">
+    <h1 class="Contacto mb-4" id="trabajos"><u>Trabajos</u></h1>
+<br>
+  <div id="container" class="cards-container">
+    {% for trabajo in trabajos %}
+    <a href="{{ trabajo.urlTrabajo }}">
+      <div class="card">
+        <img src= "{{ trabajo.avatarImg }}" alt="Imagendeltrabajo">
+          <div class="card-info">
+            <h2>{{ trabajo.nombre }}</h2>
+            <p><strong>Click para mas info!</strong></p>
+          </div>
       </div>
+    </a>
+    {% endfor %}
   </div>
-  <div class="card">
-    <img src="/static/img/iconoplanta2.jpg" alt="portada de trabajo">
-      <div class="card-info">
-        <h2>titulo del trabajo</h2>
-        <p><strong>Año:</strong> ? </p>
-        <p><strong>Estado:</strong> ? </p>
-      </div>
-  </div>
-  <div class="card">
-    <img src="/static/img/test.jpg" alt="portada de trabajo">
-      <div class="card-info">
-        <h2>titulo del trabajo</h2>
-        <p><strong>Año:</strong> ? </p>
-        <p><strong>Estado:</strong> ? </p>
-      </div>
-  </div>
-</div>
+  </section>
+{% endblock %}
+{% block footer %}
+              {% for red in redsoc %}
+              <div class="tech-item d-flex flex-column align-items-center text-center">
+                <a href="{{ red.url }}">
+                  <img src="{{ red.iconoImg }}" alt="{{ red.nombre }}" class="red-img">
+                </a>
+              </div>
+              {% endfor %}
 {% endblock %}
